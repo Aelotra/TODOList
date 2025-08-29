@@ -11,7 +11,7 @@ namespace TODOList
     {
         static void Main(string[] args)
         {
-            Environment.SetEnvironmentVariable("env", "release");
+            Environment.SetEnvironmentVariable("env", "Release");
             bool sortie = false;
             int arg;
 

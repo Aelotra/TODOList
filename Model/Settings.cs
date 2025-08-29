@@ -10,20 +10,20 @@ namespace TODOList.Model
 {
     internal class Settings
     {
-        public string conStr { get; set; }
+        public string ConStr { get; set; }
         public string GetSettingsRelease()
         {
             IConfigurationRoot config = new ConfigurationBuilder().AddJsonFile("AppSettings.json").AddEnvironmentVariables().Build();
             var settings = config.GetSection("SettingsRelease").Get<Settings>();
-            string chaine = settings.conStr;
-            return (chaine);
+            this.ConStr = settings.ConStr;
+            return (ConStr);
         }
         public string GetSettingsDebug()
         {
             IConfigurationRoot config = new ConfigurationBuilder().AddJsonFile("AppSettings.json").AddEnvironmentVariables().Build();
             var settings = config.GetSection("SettingsDebug").Get<Settings>();
-            string chaine = settings.conStr;
-            return (chaine);
+            this.ConStr = settings.ConStr;
+            return (ConStr);
         }
     }
 }
